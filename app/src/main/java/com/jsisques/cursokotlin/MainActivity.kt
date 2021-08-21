@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
 
         //Lección 3
         sentenciaIf()
+
+        //Lección 4
+        sentenciaWhen()
     }
 
     private fun variablesYConstantes(){
@@ -84,5 +87,31 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    
+    private fun sentenciaWhen(){
+        //La sentencia when sustituye al switch
+
+        val country = "España"
+
+        when(country){
+            "España", "Colombia", "Chile", "Ecuador" -> {
+                println("En el pais $country se habla español")
+            }
+            "EEUU" -> println("En el pais $country se habla inglés")
+            "Francia" -> println("En el pais $country se habla francés")
+            else -> println("No conocemos el idioma")
+        }
+
+        val age = 10
+
+        when(age){
+            0,1,2 -> println("Eres un bebé")
+            in 3..10 -> println("Eres un niño") //El in es un rango
+            in 11..17 -> println("Eres un adolescente") //El in es un rango
+            in 18..69-> println("Eres un adulto") //El in es un rango
+            in 70..99 -> println("Eres un anciano") //El in es un rango
+            else -> println("😱")
+        }
+    }
+
+
 }
