@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
 
         //Lección 2
         tiposDeDatos()
+
+        //Lección 3
+        sentenciaIf()
     }
 
     private fun variablesYConstantes(){
@@ -67,4 +70,19 @@ class MainActivity : AppCompatActivity() {
         println(myBool && myBool2)
         println(myBool || myBool2)
     }
+
+    private fun sentenciaIf(){
+
+        val myNumber = 10
+
+        if ((myNumber <= 10 && myNumber > 5) || myNumber == 53){
+            println("$myNumber es menor que 10")
+        } else if(myNumber == 60){
+            println("$myNumber es 60")
+        } else {
+            println("$myNumber es mayor que 10")
+        }
+    }
+
+    
 }
