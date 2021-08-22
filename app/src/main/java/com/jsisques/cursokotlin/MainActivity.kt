@@ -31,6 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         //Leccion 8
         nullSafety()
+
+        //Leción 9
+        funciones()
     }
 
     private fun variablesYConstantes(){
@@ -289,5 +292,31 @@ class MainActivity : AppCompatActivity() {
             //Cuando sea nulo
             println(mySafetyString)
         }
+    }
+
+    private fun funciones(){
+
+        sayHello()
+        sayMyName("Javi")
+        sayMyNameAndAge("Javi", 22)
+        var result: Int = sumTwoNumbers(3, 9)
+        println(result)
+    }
+
+    fun sayHello(){
+        println("Hola!")
+    }
+
+    fun sayMyName(name: String){
+        println("Tu nombre es: $name")
+    }
+
+    fun sayMyNameAndAge(name: String, age: Int){
+        println("Tu nombre es: $name y tienes $age años")
+    }
+
+    fun sumTwoNumbers(firstNumber: Int, secondNumber: Int) : Int {
+        var result = firstNumber + secondNumber
+        return result
     }
 }
