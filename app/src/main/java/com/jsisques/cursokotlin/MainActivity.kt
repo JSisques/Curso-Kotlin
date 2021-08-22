@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
 
         //Lección 5
         arrays()
+
+        //Lección 6
+        maps()
     }
 
     private fun variablesYConstantes(){
@@ -170,4 +173,33 @@ class MainActivity : AppCompatActivity() {
         println(myArray.count())
     }
 
+    private fun maps(){
+
+        var myMap: Map<String, Int> = mapOf()
+        var myMutableMap: Map<String, Int> = mutableMapOf()
+        println(myMap)
+
+        //Añadir elementos (Este mapa no es mutable por lo tanto no se pueden añadir valores nuevos)
+        myMap = mapOf("Javi" to 1, "Sisques" to 2, "Pedro" to 3)
+
+        //Este mapa si es mutable por lo tanto se pueden añadir elementos nuevos
+        myMutableMap = mutableMapOf("Javi" to 1, "Sisques" to 2, "Pedro" to 3)
+
+        //Añadir un solo valor
+        myMutableMap["Ana"] = 7
+        myMutableMap.put("Maria", 9)
+        println(myMutableMap)
+
+        //Acceder a un dato
+        var value = myMutableMap["Javi"]
+        println(value)
+
+        //Actualizar un dato
+        myMutableMap.put("Javi", 11)
+        println(myMutableMap)
+
+        //Eliminar datos
+        myMutableMap.remove("Pedro")
+        println(myMutableMap)
+    }
 }
