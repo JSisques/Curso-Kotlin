@@ -28,6 +28,9 @@ class MainActivity : AppCompatActivity() {
 
         //Leccion 7
         loops()
+
+        //Leccion 8
+        nullSafety()
     }
 
     private fun variablesYConstantes(){
@@ -255,5 +258,36 @@ class MainActivity : AppCompatActivity() {
             x++
         }
 
+    }
+
+    private fun nullSafety(){
+
+        var myString = "Javi"
+        //myString = null
+        println(myString)
+
+        //variable null safety
+        var mySafetyString: String? = "Javi Safety"
+        mySafetyString = null
+        println(mySafetyString)
+
+        //Comprobar que una variable no sea nula
+        if (mySafetyString != null){
+            //Imprimimos el valor a la fuerza
+            println(mySafetyString!!)
+        } else{
+            println(mySafetyString)
+        }
+
+        //Safe call
+        println(mySafetyString?.length) //No sabemos si es nulo por lo que ponemos el interrogante
+
+        mySafetyString.let{
+            //Cuando no sea nulo
+            println(it)
+        } ?: run{
+            //Cuando sea nulo
+            println(mySafetyString)
+        }
     }
 }
