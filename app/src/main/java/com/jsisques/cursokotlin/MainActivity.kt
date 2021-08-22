@@ -19,6 +19,9 @@ class MainActivity : AppCompatActivity() {
 
         //Lección 4
         sentenciaWhen()
+
+        //Lección 5
+        arrays()
     }
 
     private fun variablesYConstantes(){
@@ -101,7 +104,7 @@ class MainActivity : AppCompatActivity() {
             else -> println("No conocemos el idioma")
         }
 
-        val age = 10
+        val age = 100
 
         when(age){
             0,1,2 -> println("Eres un bebé")
@@ -113,5 +116,58 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun arrays(){
+
+        val name = "Javi"
+        val surname = "Sisques"
+        val company = "JSisques"
+        val age = "32"
+
+        //Añadir datos
+        val myArray: ArrayList<String> = arrayListOf<String>()
+
+        myArray.add(name)
+        myArray.add(surname)
+        myArray.add(company)
+        myArray.add(age)
+
+        println(myArray)
+
+        //Añadir multiples datos
+        myArray.addAll(listOf("Hola", "Palabra"))
+
+        println(myArray)
+
+        //Obtener datos
+        val myCompany = myArray[2]
+
+        println(myCompany)
+
+        //Modificar datos
+        myArray[4] = "22"
+
+        println(myArray)
+
+        //Borrar un dato
+        myArray.removeAt(4)
+
+        println(myArray)
+
+        //Recorrer array
+        myArray.forEach{
+            println(it)
+        }
+
+        //Otras operaciones
+        println(myArray.first())
+        println(myArray.last())
+
+        myArray.sort()
+        println(myArray)
+
+        println(myArray.count())
+        myArray.clear()
+        println(myArray.count())
+    }
 
 }
