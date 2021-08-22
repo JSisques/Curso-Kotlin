@@ -29,11 +29,14 @@ class MainActivity : AppCompatActivity() {
         //Leccion 7
         loops()
 
-        //Leccion 8
+        //Lección 8
         nullSafety()
 
-        //Leción 9
+        //Lección 9
         funciones()
+
+        //Lección 10
+        clases()
     }
 
     private fun variablesYConstantes(){
@@ -318,5 +321,18 @@ class MainActivity : AppCompatActivity() {
     fun sumTwoNumbers(firstNumber: Int, secondNumber: Int) : Int {
         var result = firstNumber + secondNumber
         return result
+    }
+
+    private fun clases(){
+
+        var javi = Programmer("Javi", 11, arrayOf(Programmer.Language.JAVA, Programmer.Language.SWIFT, Programmer.Language.KOTLIN))
+        javi.age = 22
+        println(javi.age)
+        javi.code()
+
+        var antonio = Programmer("Antonio", 45, arrayOf(Programmer.Language.JAVA, Programmer.Language.SWIFT, Programmer.Language.KOTLIN, Programmer.Language.JAVASCRIPT ), arrayOf(javi))
+        antonio.code()
+
+        println("${antonio.friends?.first()?.name} es amigo de ${antonio.name}")
     }
 }
