@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
 
         //Lección 6
         maps()
+
+        //Leccion 7
+        loops()
     }
 
     private fun variablesYConstantes(){
@@ -127,7 +130,7 @@ class MainActivity : AppCompatActivity() {
         val age = "32"
 
         //Añadir datos
-        val myArray: ArrayList<String> = arrayListOf<String>()
+            val myArray: ArrayList<String> = arrayListOf<String>()
 
         myArray.add(name)
         myArray.add(surname)
@@ -201,5 +204,56 @@ class MainActivity : AppCompatActivity() {
         //Eliminar datos
         myMutableMap.remove("Pedro")
         println(myMutableMap)
+    }
+
+    private fun loops(){
+
+        val myArray: List<String> = listOf("Uno", "Dos", "Tres", "Cuatro", "Cinco")
+        var myMap: Map<String, Int> = mutableMapOf("Javi" to 1, "Sisques" to 2, "Pedro" to 3)
+
+        //Bucle for
+        for (myString in myArray){
+            println(myString)
+        }
+
+        for (element in myMap){
+            println("${element.key} - ${element.value}")
+        }
+
+        //Del 0 al 10 incluidos
+        for (x in 0..10) {
+            println(x)
+        }
+
+        //Del 0 al 9
+        for (x in 0 until 10) {
+            println(x)
+        }
+
+        //Del 0 al 99 de 11 en 11
+        for (x in 0 until 100 step 11) {
+            println(x)
+        }
+
+        //Bucle regresivo
+        for (x in 10 downTo 0 step 2) {
+            println(x)
+        }
+
+        //Crear array con rangos
+        var array = (0..20)
+        println(array)
+        for (number in array) {
+            println(number)
+        }
+
+        //While
+        var x = 0
+
+        while(x < 10){
+            println(x)
+            x++
+        }
+
     }
 }
